@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>近畿インフラDX大阪研修旅行｜白山野々市建設業協会青年委員会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --primary-day1: #ff6600;
+    --primary-day1-light: #fff5ee;
+    --primary-day2: #0066cc;
+    --primary-day2-light: #f0f7ff;
+    --accent-yellow: #ffcc00;
+    --text-color: #2b2b2b;
+    --bg-color: #f4f6f8;
+    --card-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+  }
+
+  /* ヒーロー（パンフレット表紙風） */
+  .hero {
+    position: relative;
+    min-height: 75vh;
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 100%), url("img/hero.jpg") center/cover no-repeat #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  .hero-container {
+    max-width: 800px;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--accent-yellow);
+    color: #333;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 6px 18px;
+    border-radius: 50px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    line-height: 1.25;
+    margin: 0 0 16px;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+  }
+  .hero-meta-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+  .hero-btn {
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: 50px;
+    background: var(--accent-yellow);
+    color: #222;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+    transition: all 0.3s ease;
+  }
+  .hero-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 204, 0, 0.6);
+  }
+
+  /* メインコンテンツ配置 */
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* セクション基本構成 */
+  .section {
+    background: white;
+    margin-top: 36px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: var(--card-shadow);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 12px;
+    margin-bottom: 28px;
+  }
+  .section-tag {
+    background: var(--primary-day1);
+    color: white;
+    font-weight: 800;
+    font-size: 0.85rem;
+    padding: 4px 12px;
+    border-radius: 6px;
+  }
+  .section-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin: 0;
+    color: #111;
+  }
+
+  /* 見どころ（HIGHLIGHTS） */
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .highlight-card {
+    background: #fdfdfd;
+    border: 1px solid #eef0f2;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  .highlight-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+  .highlight-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #222;
+  }
+
+  /* 2日目スタイル切り替え */
+  .day2 .section-tag {
+    background: var(--primary-day2);
+  }
+
+  /* タイムライン（旅行のしおり） */
+  .timeline {
+    position: relative;
+    padding-left: 32px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    bottom: 6px;
+    width: 4px;
+    background: #eee;
+    border-radius: 2px;
+  }
+  .day1 .timeline::before {
+    background: var(--primary-day1-light);
+    border-left: 2px solid var(--primary-day1);
+  }
+  .day2 .timeline::before {
+    background: var(--primary-day2-light);
+    border-left: 2px solid var(--primary-day2);
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 28px;
+  }
+  .timeline-item:last-child {
+    margin-bottom: 0;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 6px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: white;
+    border: 4px solid var(--primary-day1);
+    box-shadow: 0 0 0 3px white;
+  }
+  .day2 .timeline-dot {
+    border-color: var(--primary-day2);
+  }
+
+  .timeline-time {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: var(--primary-day1);
+    margin-bottom: 2px;
+  }
+  .day2 .timeline-time {
+    color: var(--primary-day2);
+  }
+  .timeline-spot {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111;
+  }
+  .timeline-desc {
+    font-size: 0.92rem;
+    color: #666;
+    margin-top: 4px;
+  }
+
+  /* 画像カードレイアウト */
+  .photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .photo-gallery img, .photo-single img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  .photo-gallery img:hover, .photo-single img:hover {
+    transform: scale(1.02);
+  }
+  .photo-single img {
+    height: 280px;
+    margin-top: 28px;
+  }
+
+  /* 注意事項（インフォメーション） */
+  .info-card {
+    background: #fffbe6;
+    border: 2px dashed #ffe58f;
+    border-radius: 16px;
+    padding: 24px 30px;
+  }
+  .info-card h3 {
+    margin-top: 0;
+    color: #873800;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .info-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+  .info-list li {
+    margin-bottom: 10px;
+    color: #444;
+  }
+
+  /* モバイル対応（スマホ） */
+  @media (max-width: 680px) {
+    .hero-title {
+      font-size: 1.9rem;
+    }
+    .section {
+      padding: 24px 20px;
+      margin-top: 20px;
+    }
+    .highlights-grid {
+      grid-template-columns: 1fr;
+    }
+    .photo-gallery {
+      grid-template-columns: 1fr;
+    }
+    .photo-gallery img {
+      height: 200px;
+    }
+    .photo-single img {
+      height: 200px;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- HERO / 表紙 -->
+<section class="hero">
+  <div class="hero-container">
+    <span class="hero-badge">白山野々市建設業協会青年委員会</span>
+    <h1 class="hero-title">近畿インフラDX<br>大阪研修旅行</h1>
+    
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 2026年10月8日(木)〜9日(金)</span>
+      <span class="hero-meta-item">🚌 貸切バス利用（1泊2日）</span>
+    </div>
+
+    <a href="#schedule" class="hero-btn">旅の行程（しおり）を見る</a>
+  </div>
+</section>
+
+<div class="container" id="schedule">
+
+  <!-- PURPOSE / 見どころ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">PURPOSE</span>
+      <h2 class="section-title">研修の目的 & ハイライト</h2>
+    </div>
+    <p style="margin:0 0 20px;">
+      近畿圏で最先端を行く「インフラDX」の現場を体感し、青年委員会としての知見向上と親睦を目的とした研修旅行です。見学・体験・食を巡る2日間の見どころをご紹介します。
+    </p>
+
+    <div class="highlights-grid">
+      <div class="highlight-card">
+        <div class="highlight-icon">🏗️</div>
+        <div class="highlight-title">近畿インフラDX推進センター</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">🏯</div>
+        <div class="highlight-title">大阪城 ＆ カップヌードル館</div>
+      </div>
+      <div class="highlight-card">
+        <div class="highlight-icon">⛩️</div>
+        <div class="highlight-title">伏見稲荷大社 参拝</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DAY 1 -->
+  <section class="section day1">
+    <div class="section-header">
+      <span class="section-tag">DAY 1</span>
+      <h2 class="section-title">10月8日（木）大阪観光＆懇親</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">07:00</div>
+        <div class="timeline-spot">協会事務所前 集合・出発</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">07:35 – 07:45</div>
+        <div class="timeline-spot">美川乗車組 集合・出発</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">08:50 – 09:05</div>
+        <div class="timeline-spot">南条SA 休憩</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">12:00 – 13:15</div>
+        <div class="timeline-spot">昼食：千房 阪急服部店</div>
+        <div class="timeline-desc">本場・大阪のお好み焼きランチをご堪能ください。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">13:45 – 15:15</div>
+        <div class="timeline-spot">カップヌードルミュージアム 大阪池田</div>
+        <div class="timeline-desc">マイカップヌードル作り体験などを楽しみます。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">15:50 – 17:20</div>
+        <div class="timeline-spot">大阪城（天守閣見学）</div>
+        <div class="timeline-desc">大阪のシンボル・天守閣からの眺望を満喫。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">18:30 – 20:30</div>
+        <div class="timeline-spot">夕食：バルバッコア 梅田店</div>
+        <div class="timeline-desc">本格シュラスコ料理を味わいながらの懇親会。</div>
+      </div>
+    </div>
+
+    <div class="photo-gallery">
+      <img src="img/cup.jpg" alt="カップヌードルミュージアム">
+      <img src="img/castle.jpg" alt="大阪城天守閣">
+      <img src="img/barbacoa.jpg" alt="バルバッコアでの夕食">
+    </div>
+  </section>
+
+  <!-- DAY 2 -->
+  <section class="section day2">
+    <div class="section-header">
+      <span class="section-tag">DAY 2</span>
+      <h2 class="section-title">10月9日（金）DX研修＆帰路</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">09:00</div>
+        <div class="timeline-spot">ホテル出発</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">10:00 – 12:00</div>
+        <div class="timeline-spot">近畿インフラDX推進センター 研修</div>
+        <div class="timeline-desc">国土交通省 近畿地方整備局（枚方市）にて最先端技術の研修。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">13:45 – 14:45</div>
+        <div class="timeline-spot">伏見稲荷大社 観光・参拝</div>
+        <div class="timeline-desc">朱色の千本鳥居で有名な伏見稲荷大社を散策します。</div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">19:25</div>
+        <div class="timeline-spot">協会事務所前 到着・解散</div>
+        <div class="timeline-desc">2日間お疲れ様でした！</div>
+      </div>
+    </div>
+
+    <div class="photo-single">
+      <img src="img/fushimi.jpg" alt="伏見稲荷大社">
+    </div>
+  </section>
+
+  <!-- NOTICE / 注意事項 -->
+  <section class="section" style="padding:0; background:transparent; box-shadow:none;">
+    <div class="info-card">
+      <h3>📌 ご参加にあたっての注意事項</h3>
+      <ul class="info-list">
+        <li><strong>集合時間の厳守：</strong>貸切バス運行のため、集合時間には遅れないようお願いいたします。</li>
+        <li><strong>シートベルト着用：</strong>移動中の安全のため、バス乗車中は常にシートベルトをご着用ください。</li>
+        <li><strong>貴重品管理：</strong>貴重品や個人のお荷物はご自身で管理をお願いいたします。</li>
+        <li><strong>行程の変更：</strong>当日の道路状況や天候等により、見学・到着時間が前後する場合がございます。</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
