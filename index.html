@@ -1,431 +1,362 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>白山野々市建設業協会青年部 関西研修旅行</title>
-  <style>
-    :root {
-      --primary: #1A365D;
-      --secondary: #2B6CB0;
-      --accent: #DD6B20;
-      --bg: #F7FAFC;
-      --card-bg: #FFFFFF;
-      --text: #2D3748;
-      --text-muted: #718096;
-      --border: #E2E8F0;
-    }
+<meta charset="UTF-8">
+<title>近畿インフラDX大阪研修旅行｜白山野々市建設業協会青年委員会</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700;900&display=swap" rel="stylesheet">
 
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      padding-bottom: 40px;
-    }
+<style>
+  :root {
+    --primary-day1: #ff6600;
+    --primary-day1-light: #fff5ee;
+    --primary-day2: #0066cc;
+    --primary-day2-light: #f0f7ff;
+    --accent-yellow: #ffcc00;
+    --text-color: #2b2b2b;
+    --bg-color: #f4f6f8;
+    --card-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  }
 
-    /* Header */
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 24px 16px;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    }
+  * {
+    box-sizing: border-box;
+  }
 
-    header h1 {
-      font-size: 1.3rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-    }
+  body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
 
-    header p {
-      font-size: 0.85rem;
-      opacity: 0.9;
-      margin-top: 4px;
-    }
+  /* ----------------------------------
+     表紙（ヒーロー）
+  ---------------------------------- */
+  .hero {
+    position: relative;
+    padding: 24px 16px 20px;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg") center/cover no-repeat #444;
+    color: white;
+    text-align: center;
+  }
+  .hero-badge {
+    display: inline-block;
+    background: var(--accent-yellow);
+    color: #222;
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 3px 12px;
+    border-radius: 50px;
+    margin-bottom: 6px;
+  }
+  .hero-title {
+    font-size: 1.5rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin: 0 0 8px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+  }
+  .hero-meta-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.25);
+  }
+  .hero-btn {
+    display: inline-block;
+    padding: 8px 24px;
+    border-radius: 50px;
+    background: var(--accent-yellow);
+    color: #222;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 3px 10px rgba(255, 204, 0, 0.4);
+  }
 
-    /* Tabs */
-    .tab-container {
-      display: flex;
-      background: #fff;
-      border-bottom: 1px solid var(--border);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 12px 40px;
+  }
 
-    .tab-btn {
-      flex: 1;
-      padding: 12px 0;
-      border: none;
-      background: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-muted);
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      transition: all 0.2s;
-    }
+  .section {
+    background: white;
+    margin-top: 16px;
+    padding: 20px 16px;
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 8px;
+    margin-bottom: 16px;
+  }
+  .section-tag {
+    background: var(--primary-day1);
+    color: white;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 6px;
+  }
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0;
+    color: #111;
+  }
 
-    .tab-btn.active {
-      color: var(--primary);
-      border-bottom-color: var(--primary);
-    }
+  .highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 12px;
+  }
+  .highlight-card {
+    position: relative;
+    height: 110px;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+  .highlight-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 70%);
+  }
+  .highlight-content {
+    position: relative;
+    z-index: 1;
+  }
+  .highlight-icon {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+  .highlight-title {
+    font-weight: 700;
+    font-size: 0.82rem;
+    line-height: 1.25;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.8);
+  }
 
-    /* Content Area */
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 16px;
-    }
+  .card-dx { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Komatsu_PC200_Civil_Engineering_DX.jpg/800px-Komatsu_PC200_Civil_Engineering_DX.jpg"); }
+  .card-castle { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Osaka_Castle_02bs3200.jpg/1200px-Osaka_Castle_02bs3200.jpg"); }
+  .card-fushimi { background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg/800px-Fushimi_Inari_Taisha_Senbon_Torii_2016.jpg"); }
 
-    .day-content {
-      display: none;
-    }
+  .day2 .section-tag { background: var(--primary-day2); }
 
-    .day-content.active {
-      display: block;
-    }
+  /* ----------------------------------
+     タイムライン
+  ---------------------------------- */
+  .timeline {
+    position: relative;
+    padding-left: 20px;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    bottom: 6px;
+    width: 3px;
+    background: #eee;
+    border-radius: 2px;
+  }
+  .day1 .timeline::before { background: var(--primary-day1); }
+  .day2 .timeline::before { background: var(--primary-day2); }
 
-    /* Timeline Section */
-    .timeline {
-      position: relative;
-      padding-left: 20px;
-    }
+  .timeline-item {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
 
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 7px;
-      top: 10px;
-      bottom: 10px;
-      width: 2px;
-      background: #CBD5E0;
-    }
+  .timeline-dot {
+    position: absolute;
+    left: -20px;
+    top: 6px;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid var(--primary-day1);
+  }
+  .day2 .timeline-dot { border-color: var(--primary-day2); }
 
-    .spot-card {
-      position: relative;
-      background: var(--card-bg);
-      border-radius: 12px;
-      padding: 16px;
-      margin-bottom: 20px;
-      border: 1px solid var(--border);
-      box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-    }
+  .timeline-body {
+    flex: 1;
+  }
+  .timeline-time {
+    font-weight: 800;
+    font-size: 0.92rem;
+    color: var(--primary-day1);
+    margin-bottom: 1px;
+  }
+  .day2 .timeline-time { color: var(--primary-day2); }
 
-    .spot-card::before {
-      content: '';
-      position: absolute;
-      left: -20px;
-      top: 20px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--secondary);
-      border: 3px solid #fff;
-      box-shadow: 0 0 0 1px var(--secondary);
-    }
+  .timeline-spot {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+  }
 
-    .spot-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 10px;
-    }
+  /* 右側の公式HP画像リンク */
+  .timeline-photo-link {
+    position: relative;
+    display: block;
+    width: 82px;
+    height: 64px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-decoration: none;
+    background: #eee;
+  }
+  .timeline-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .timeline-photo-link:hover .timeline-thumb {
+    transform: scale(1.08);
+  }
+  .hp-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.58rem;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
 
-    .spot-time {
-      font-size: 0.85rem;
-      font-weight: 700;
-      color: var(--accent);
-      background: #FFFAF0;
-      padding: 2px 8px;
-      border-radius: 4px;
-      border: 1px solid #FBD38D;
-    }
+  /* マップ文字リンク */
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--accent-yellow);
+  }
+  .map-link:active { opacity: 0.7; }
+  .map-icon { font-size: 0.8em; }
 
-    .spot-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--primary);
-      margin-top: 4px;
-    }
+  .timeline-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 2px;
+    line-height: 1.4;
+  }
 
-    .spot-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin: 10px 0;
-      border: 1px solid var(--border);
-    }
+  .info-card {
+    background: #fffbe6;
+    border: 1.5px dashed #ffe58f;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .info-card h3 {
+    margin-top: 0;
+    color: #873800;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .info-list {
+    margin: 0;
+    padding-left: 16px;
+  }
+  .info-list li {
+    margin-bottom: 6px;
+    color: #444;
+    font-size: 0.85rem;
+  }
 
-    .spot-desc {
-      font-size: 0.9rem;
-      color: var(--text);
-      margin-bottom: 12px;
+  @media (max-width: 480px) {
+    .highlights-grid {
+      grid-template-columns: 1fr;
     }
-
-    /* Links / Buttons */
-    .link-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px dashed var(--border);
+    .highlight-card {
+      height: 75px;
     }
-
-    .btn-link {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-      padding: 10px 14px;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-decoration: none;
-      transition: background 0.2s;
-    }
-
-    .btn-info {
-      background-color: #EBF8FF;
-      color: #2B6CB0;
-      border: 1px solid #BEE3F8;
-    }
-
-    .btn-info:hover {
-      background-color: #BEE3F8;
-    }
-
-    .btn-map {
-      background-color: #EDF2F7;
-      color: #4A5568;
-      border: 1px solid #CBD5E0;
-    }
-
-    .btn-map:hover {
-      background-color: #E2E8F0;
-    }
-
-    .btn-icon {
-      font-size: 1rem;
-    }
-  </style>
+  }
+</style>
 </head>
+
 <body>
 
-  <header>
-    <h1>白山野々市建設業協会青年部</h1>
-    <p>関西研修旅行 旅のしおり</p>
-  </header>
-
-  <div class="tab-container">
-    <button class="tab-btn active" onclick="switchTab('day1')">1日目 (大阪)</button>
-    <button class="tab-btn" onclick="switchTab('day2')">2日目 (大阪・京都)</button>
-  </div>
-
-  <div class="container">
+<!-- HERO / 表紙 -->
+<section class="hero">
+  <div class="hero-container">
+    <span class="hero-badge">白山野々市建設業協会青年委員会</span>
+    <h1 class="hero-title">近畿インフラDX<br>大阪研修旅行 旅のしおり</h1>
     
-    <!-- DAY 1 -->
-    <div id="day1" class="day-content active">
-      <div class="timeline">
-
-        <!-- 1. 千房 -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">昼食</span>
-              <h2 class="spot-title">千房 阪急服部店</h2>
-            </div>
-          </div>
-          <img src="image_40255f.jpg" alt="千房のお好み焼き" class="spot-img">
-          <p class="spot-desc">大阪到着後、まずは本格的な大阪お好み焼きで昼食。伝統の味を楽しみながら懇親を深めます。</p>
-          <div class="link-group">
-            <a href="https://www.chibo.com/" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> 千房 公式サイト
-            </a>
-            <a href="https://maps.google.com/?q=千房+阪急服部店" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-        <!-- 2. カップヌードルミュージアム -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">午後</span>
-              <h2 class="spot-title">カップヌードルミュージアム 大阪池田</h2>
-            </div>
-          </div>
-          <img src="image_4028fb.jpg" alt="カップヌードルミュージアム" class="spot-img">
-          <p class="spot-desc">インスタントラーメンの発明の歴史や、創業者・安藤百福氏の発想・起業家精神について学びます。「マイカップヌードルファクトリー」体験も実施。</p>
-          <div class="link-group">
-            <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/about/" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> 創業者・安藤百福の生涯（公式サイト）
-            </a>
-            <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> カップヌードルミュージアム 大阪池田 公式TOP
-            </a>
-            <a href="https://maps.google.com/?q=カップヌードルミュージアム+大阪池田" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-        <!-- 3. 大阪城 -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">午後</span>
-              <h2 class="spot-title">大阪城天守閣</h2>
-            </div>
-          </div>
-          <img src="image_403007.jpg" alt="大阪城天守閣" class="spot-img">
-          <p class="spot-desc">歴史的建造物としての巨石の石垣や堀の構造、近現代の復元建築技術を視察します。</p>
-          <div class="link-group">
-            <a href="https://www.osakacastlepark.jp/pdf/model2026_japan.pdf" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">📄</span> 大阪城公園ガイドマップ (PDF)
-            </a>
-            <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-        <!-- 4. ハートンホテル西梅田 -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">夕方</span>
-              <h2 class="spot-title">ハートンホテル西梅田（チェックイン）</h2>
-            </div>
-          </div>
-          <img src="image_4033c4.png" alt="ハートンホテル西梅田" class="spot-img">
-          <p class="spot-desc">1日目の宿泊先。梅田駅・大阪駅からのアクセスも良く、懇親会会場への移動にも便利な立地です。</p>
-          <div class="link-group">
-            <a href="https://www.hearton.co.jp/hotel/nishiumeda" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> ハートンホテル西梅田 公式サイト
-            </a>
-            <a href="https://maps.google.com/?q=ハートンホテル西梅田" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-        <!-- 5. バルバッコア -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">夜</span>
-              <h2 class="spot-title">バルバッコア 梅田店（夕食懇親会）</h2>
-            </div>
-          </div>
-          <img src="image_403785.jpg" alt="バルバッコア シュラスコ" class="spot-img">
-          <p class="spot-desc">本場ブラジルのシュラスコ料理を味わいながら、会員同士の親睦を深める懇親会を開催します。</p>
-          <div class="link-group">
-            <a href="https://barbacoa.jp/pages/cuisine" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> シュラスコとは？（料理解説）
-            </a>
-            <a href="https://barbacoa.jp/pages/umeda" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> バルバッコア 梅田店 店舗情報
-            </a>
-            <a href="https://maps.google.com/?q=バルバッコア+梅田店" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-      </div>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 2026年10月8日(木)〜9日(金)</span>
+      <span class="hero-meta-item">🚌 貸切バス（1泊2日）</span>
     </div>
 
-    <!-- DAY 2 -->
-    <div id="day2" class="day-content">
-      <div class="timeline">
-
-        <!-- 6. インフラDX -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">午前</span>
-              <h2 class="spot-title">近畿インフラDX推進センター</h2>
-            </div>
-          </div>
-          <img src="image_403c23.png" alt="近畿インフラDX推進センター" class="spot-img">
-          <p class="spot-desc">最先端の建設ICT技術やBIM/CIM活用、重機リモート操作技術などの体験学習・研修を実施します。</p>
-          <div class="link-group">
-            <a href="https://www.kkr.mlit.go.jp/plan/dx/index.html" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> 近畿インフラDX推進センター 公式案内
-            </a>
-            <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-        <!-- 7. 百足屋 -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">昼食</span>
-              <h2 class="spot-title">京おばんざい 百足屋</h2>
-            </div>
-          </div>
-          <img src="image_408e58.png" alt="京おばんざい 百足屋" class="spot-img">
-          <p class="spot-desc">京都へ移動し、京町家の情緒あふれる空間で伝統的な「京おばんざい」の昼食を愉しみます。</p>
-          <div class="link-group">
-            <a href="https://maps.google.com/?q=京おばんざい+百足屋" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-        <!-- 8. 伏見稲荷大社 -->
-        <div class="spot-card">
-          <div class="spot-header">
-            <div>
-              <span class="spot-time">午後</span>
-              <h2 class="spot-title">伏見稲荷大社</h2>
-            </div>
-          </div>
-          <img src="image_40925b.jpg" alt="伏見稲荷大社 千本鳥居" class="spot-img">
-          <p class="spot-desc">商売繁盛・安全祈願のため参拝。圧巻の千本鳥居を巡り、研修の締めくくりとします。</p>
-          <div class="link-group">
-            <a href="http://inari.jp/" target="_blank" class="btn-link btn-info">
-              <span class="btn-icon">ℹ️</span> 伏見稲荷大社 公式サイト
-            </a>
-            <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" class="btn-link btn-map">
-              <span class="btn-icon">📍</span> Google Mapで開く
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
+    <a href="#schedule" class="hero-btn">行程を見る</a>
   </div>
+</section>
 
-  <script>
-    function switchTab(dayId) {
-      document.querySelectorAll('.day-content').forEach(el => el.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+<div class="container" id="schedule">
 
-      document.getElementById(dayId).classList.add('active');
-      if (dayId === 'day1') {
-        document.querySelectorAll('.tab-btn')[0].classList.add('active');
-      } else {
-        document.querySelectorAll('.tab-btn')[1].classList.add('active');
-      }
-    }
-  </script>
-</body>
-</html>
+  <!-- PURPOSE / 見どころ -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">ABOUT</span>
+      <h2 class="section-title">旅の目的 ＆ ハイライト</h2>
+    </div>
+    <p style="margin:0 0 12px; font-size: 0.88rem; color:#444;">
+      近畿圏で進む「インフラDX」の現場をみんなで学んできます！学びはもちろん、大阪・京都のグルメや観光も楽しんで親睦を深めましょう！
+    </p>
+
+    <div class="highlights-grid">
+      <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" class="highlight-card card-dx">
+        <div class="highlight-content">
+          <div class="highlight-icon">🏗</div>
+          <div class="highlight-title">近畿インフラDX推進センター 📍</div>
+        </div>
+      </a>
+      <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" class="highlight-card card-castle">
+        <div class="highlight-content">
+          <div class="highlight-icon">🏯</div>
+          <div class="highlight
