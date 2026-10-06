@@ -34,11 +34,13 @@
     line-height: 1.6;
   }
 
-  /* 表紙（ヒーロー）スマホ極小化 */
+  /* ----------------------------------
+     表紙（ヒーロー）スマホ極小化
+  ---------------------------------- */
   .hero {
     position: relative;
     padding: 24px 16px 20px;
-    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), url("https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1000&q=80") center/cover no-repeat #444;
+    background: linear-gradient(135deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 100%), url("https://www.osakacastle.net/wp-content/themes/osakacastle/images/top/main_01.jpg") center/cover no-repeat #444;
     color: white;
     text-align: center;
   }
@@ -165,13 +167,15 @@
     text-shadow: 0 1px 3px rgba(0,0,0,0.8);
   }
 
-  .card-dx { background-image: url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=500&q=80"); }
-  .card-castle { background-image: url("https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=500&q=80"); }
-  .card-fushimi { background-image: url("https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=500&q=80"); }
+  .card-dx { background-image: url("https://www.kkr.mlit.go.jp/kingi/infradx-center/img/main_img.jpg"); }
+  .card-castle { background-image: url("https://www.osakacastle.net/wp-content/themes/osakacastle/images/top/main_01.jpg"); }
+  .card-fushimi { background-image: url("https://inari.jp/assets/img/top/main_pc01.jpg"); }
 
   .day2 .section-tag { background: var(--primary-day2); }
 
-  /* タイムライン */
+  /* ----------------------------------
+     タイムライン
+  ---------------------------------- */
   .timeline {
     position: relative;
     padding-left: 20px;
@@ -228,7 +232,7 @@
     color: #111;
   }
 
-  /* 右側の写真（公式HPリンク） */
+  /* 右側の公式HP画像リンク */
   .timeline-photo-link {
     position: relative;
     display: block;
@@ -239,6 +243,7 @@
     flex-shrink: 0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     text-decoration: none;
+    background: #eee;
   }
   .timeline-thumb {
     width: 100%;
@@ -255,13 +260,13 @@
     right: 2px;
     background: rgba(0, 0, 0, 0.75);
     color: #fff;
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     font-weight: 700;
     padding: 1px 4px;
     border-radius: 3px;
   }
 
-  /* マップリンク */
+  /* マップ文字リンク */
   .map-link {
     display: inline-flex;
     align-items: center;
@@ -428,9 +433,9 @@
           </div>
           <div class="timeline-desc">大阪到着！本場のお好み焼きランチを堪能。</div>
         </div>
-        <!-- 公式HPリンク付き写真（千房） -->
-        <a href="https://shop.chibo.com/detail/38/" target="_blank" class="timeline-photo-link" title="千房 公式サイト">
-          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=300&q=80" alt="千房 お好み焼き" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（千房） -->
+        <a href="https://shop.chibo.com/detail/38/" target="_blank" class="timeline-photo-link" title="千房 阪急服部店 公式HP">
+          <img src="https://shop.chibo.com/assets/img/top/menu_01.jpg" alt="千房 お好み焼き" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -446,9 +451,9 @@
           </div>
           <div class="timeline-desc">マイカップヌードル作り体験（14:30〜）！</div>
         </div>
-        <!-- 公式HPリンク付き写真（カップヌードルミュージアム） -->
-        <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" class="timeline-photo-link" title="カップヌードルミュージアム 公式サイト">
-          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=300&q=80" alt="マイカップヌードル体験" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（カップヌードルミュージアム） -->
+        <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" class="timeline-photo-link" title="カップヌードルミュージアム 公式HP">
+          <img src="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/assets/img/attractions/mycupnoodles/main.jpg" alt="マイカップヌードル" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -464,9 +469,9 @@
           </div>
           <div class="timeline-desc">大阪のシンボル・天守閣に登って景色を鑑賞！</div>
         </div>
-        <!-- 公式HPリンク付き写真（大阪城） -->
-        <a href="https://www.osakacastle.net/" target="_blank" class="timeline-photo-link" title="大阪城天守閣 公式サイト">
-          <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=300&q=80" alt="大阪城天守閣" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（大阪城） -->
+        <a href="https://www.osakacastle.net/" target="_blank" class="timeline-photo-link" title="大阪城天守閣 公式HP">
+          <img src="https://www.osakacastle.net/wp-content/themes/osakacastle/images/top/main_01.jpg" alt="大阪城天守閣" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -482,9 +487,9 @@
           </div>
           <div class="timeline-desc">ホテルに到着！部屋で荷物を置いて少し一休みの時間。</div>
         </div>
-        <!-- 公式HPリンク付き写真（ハートンホテル） -->
-        <a href="https://www.hearton.co.jp/hotel/nishiumeda" target="_blank" class="timeline-photo-link" title="ハートンホテル西梅田 公式サイト">
-          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=300&q=80" alt="ハートンホテル西梅田" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（ハートンホテル） -->
+        <a href="https://www.hearton.co.jp/hotel/nishi-umeda" target="_blank" class="timeline-photo-link" title="ハートンホテル西梅田 公式HP">
+          <img src="https://www.hearton.co.jp/wp-content/themes/hearton/images/hotel/nishi-umeda/main.jpg" alt="ハートンホテル西梅田 外観" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -500,9 +505,9 @@
           </div>
           <div class="timeline-desc">ガッツリお肉を食べるシュラスコ懇親会！（※ホテルから徒歩約6分）</div>
         </div>
-        <!-- 公式HPリンク付き写真（バルバッコア） -->
-        <a href="https://barbacoa.jp/pages/umeda" target="_blank" class="timeline-photo-link" title="バルバッコア 梅田店 公式サイト">
-          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80" alt="バルバッコア シュラスコ" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（バルバッコア） -->
+        <a href="https://barbacoa.jp/umeda/" target="_blank" class="timeline-photo-link" title="バルバッコア 梅田店 公式HP">
+          <img src="https://barbacoa.jp/assets/img/umeda/main.jpg" alt="バルバッコア シュラスコ" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -539,9 +544,9 @@
           </div>
           <div class="timeline-desc">今回のメイン！枚方市にて最先端3D・ICT施工をしっかり勉強。</div>
         </div>
-        <!-- 公式案内リンク付き写真（DX推進センター） -->
+        <!-- 公式HP画像＆リンク（DX推進センター） -->
         <a href="https://www.kkr.mlit.go.jp/kingi/infradx-center/index.html" target="_blank" class="timeline-photo-link" title="近畿インフラDX推進センター 公式案内">
-          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80" alt="近畿インフラDX研修" class="timeline-thumb">
+          <img src="https://www.kkr.mlit.go.jp/kingi/infradx-center/img/main_img.jpg" alt="近畿インフラDX研修" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -557,9 +562,9 @@
           </div>
           <div class="timeline-desc">京都のおいしいおばんざいランチを堪能。</div>
         </div>
-        <!-- 公式HPリンク付き写真（百足屋） -->
-        <a href="https://mukadeya.gorp.jp/" target="_blank" class="timeline-photo-link" title="京おばんざい 百足屋 公式サイト">
-          <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?auto=format&fit=crop&w=300&q=80" alt="京おばんざい 百足屋" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（百足屋） -->
+        <a href="https://mukadeya.gorp.jp/" target="_blank" class="timeline-photo-link" title="京おばんざい 百足屋 公式HP">
+          <img src="https://r.r10s.jp/com/img/thumb/200/200/1000/1000/mukadeya/top_01.jpg" alt="京おばんざい 百足屋" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
@@ -575,9 +580,9 @@
           </div>
           <div class="timeline-desc">朱色の千本鳥居を散策。お土産もここで！</div>
         </div>
-        <!-- 公式HPリンク付き写真（伏見稲荷大社） -->
-        <a href="https://inari.jp/" target="_blank" class="timeline-photo-link" title="伏見稲荷大社 公式サイト">
-          <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=300&q=80" alt="伏見稲荷大社 千本鳥居" class="timeline-thumb">
+        <!-- 公式HP画像＆リンク（伏見稲荷大社） -->
+        <a href="https://inari.jp/" target="_blank" class="timeline-photo-link" title="伏見稲荷大社 公式HP">
+          <img src="https://inari.jp/assets/img/top/main_pc01.jpg" alt="伏見稲荷大社 千本鳥居" class="timeline-thumb">
           <span class="hp-badge">公式HP ↗</span>
         </a>
       </div>
