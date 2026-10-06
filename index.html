@@ -38,7 +38,7 @@
   .hero {
     position: relative;
     min-height: 75vh;
-    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 100%), url("img/hero.jpg") center/cover no-repeat #444;
+    background: linear-gradient(135deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.3) 100%), url("https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat #444;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -152,6 +152,13 @@
     padding: 20px;
     border-radius: 12px;
     text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .highlight-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
   }
   .highlight-icon {
     font-size: 2rem;
@@ -228,6 +235,29 @@
     font-weight: 700;
     color: #111;
   }
+
+  /* マップリンクのスタイル */
+  .map-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #111;
+    text-decoration: none;
+    border-bottom: 2px solid var(--accent-yellow);
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .map-link:hover {
+    color: var(--primary-day1);
+    border-color: var(--primary-day1);
+  }
+  .day2 .map-link:hover {
+    color: var(--primary-day2);
+    border-color: var(--primary-day2);
+  }
+  .map-icon {
+    font-size: 0.85em;
+  }
+
   .timeline-desc {
     font-size: 0.92rem;
     color: #666;
@@ -253,7 +283,7 @@
     transform: scale(1.02);
   }
   .photo-single img {
-    height: 280px;
+    height: 320px;
     margin-top: 28px;
   }
 
@@ -336,18 +366,18 @@
     </p>
 
     <div class="highlights-grid">
-      <div class="highlight-card">
+      <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" class="highlight-card">
         <div class="highlight-icon">🏗️</div>
-        <div class="highlight-title">近畿インフラDX推進センター</div>
-      </div>
-      <div class="highlight-card">
+        <div class="highlight-title">近畿インフラDX推進センター 📍</div>
+      </a>
+      <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" class="highlight-card">
         <div class="highlight-icon">🏯</div>
-        <div class="highlight-title">大阪城 ＆ カップヌードル館</div>
-      </div>
-      <div class="highlight-card">
+        <div class="highlight-title">大阪城 ＆ カップヌードル館 📍</div>
+      </a>
+      <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" class="highlight-card">
         <div class="highlight-icon">⛩️</div>
-        <div class="highlight-title">伏見稲荷大社 参拝</div>
-      </div>
+        <div class="highlight-title">伏見稲荷大社 参拝 📍</div>
+      </a>
     </div>
   </section>
 
@@ -374,42 +404,63 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">08:50 – 09:05</div>
-        <div class="timeline-spot">南条SA 休憩</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=南条SA" target="_blank" class="map-link">
+            南条SA 休憩 <span class="map-icon">📍</span>
+          </a>
+        </div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">12:00 – 13:15</div>
-        <div class="timeline-spot">昼食：千房 阪急服部店</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=千房+阪急服部店" target="_blank" class="map-link">
+            昼食：千房 阪急服部店 <span class="map-icon">📍</span>
+          </a>
+        </div>
         <div class="timeline-desc">本場・大阪のお好み焼きランチをご堪能ください。</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">13:45 – 15:15</div>
-        <div class="timeline-spot">カップヌードルミュージアム 大阪池田</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=カップヌードルミュージアム+大阪池田" target="_blank" class="map-link">
+            カップヌードルミュージアム 大阪池田 <span class="map-icon">📍</span>
+          </a>
+        </div>
         <div class="timeline-desc">マイカップヌードル作り体験などを楽しみます。</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">15:50 – 17:20</div>
-        <div class="timeline-spot">大阪城（天守閣見学）</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=大阪城天守閣" target="_blank" class="map-link">
+            大阪城（天守閣見学） <span class="map-icon">📍</span>
+          </a>
+        </div>
         <div class="timeline-desc">大阪のシンボル・天守閣からの眺望を満喫。</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">18:30 – 20:30</div>
-        <div class="timeline-spot">夕食：バルバッコア 梅田店</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=バルバッコア+梅田店" target="_blank" class="map-link">
+            夕食：バルバッコア 梅田店 <span class="map-icon">📍</span>
+          </a>
+        </div>
         <div class="timeline-desc">本格シュラスコ料理を味わいながらの懇親会。</div>
       </div>
     </div>
 
+    <!-- 1日目の写真ギャラリー -->
     <div class="photo-gallery">
-      <img src="img/cup.jpg" alt="カップヌードルミュージアム">
-      <img src="img/castle.jpg" alt="大阪城天守閣">
-      <img src="img/barbacoa.jpg" alt="バルバッコアでの夕食">
+      <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="カップヌードル・ラーメン">
+      <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=800&q=80" alt="大阪城天守閣">
+      <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80" alt="バルバッコア・シュラスコ肉料理">
     </div>
   </section>
 
@@ -430,14 +481,22 @@
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">10:00 – 12:00</div>
-        <div class="timeline-spot">近畿インフラDX推進センター 研修</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=近畿インフラDX推進センター" target="_blank" class="map-link">
+            近畿インフラDX推進センター 研修 <span class="map-icon">📍</span>
+          </a>
+        </div>
         <div class="timeline-desc">国土交通省 近畿地方整備局（枚方市）にて最先端技術の研修。</div>
       </div>
 
       <div class="timeline-item">
         <div class="timeline-dot"></div>
         <div class="timeline-time">13:45 – 14:45</div>
-        <div class="timeline-spot">伏見稲荷大社 観光・参拝</div>
+        <div class="timeline-spot">
+          <a href="https://maps.google.com/?q=伏見稲荷大社" target="_blank" class="map-link">
+            伏見稲荷大社 観光・参拝 <span class="map-icon">📍</span>
+          </a>
+        </div>
         <div class="timeline-desc">朱色の千本鳥居で有名な伏見稲荷大社を散策します。</div>
       </div>
 
@@ -449,8 +508,9 @@
       </div>
     </div>
 
+    <!-- 2日目の写真（伏見稲荷大社） -->
     <div class="photo-single">
-      <img src="img/fushimi.jpg" alt="伏見稲荷大社">
+      <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=1200&q=80" alt="伏見稲荷大社の千本鳥居">
     </div>
   </section>
 
