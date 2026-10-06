@@ -177,7 +177,7 @@
   .day2 .section-tag { background: var(--primary-day2); }
 
   /* ----------------------------------
-     タイムライン＆右側写真レイアウト
+     タイムライン＆右側写真HPリンク
   ---------------------------------- */
   .timeline {
     position: relative;
@@ -235,14 +235,37 @@
     color: #111;
   }
 
-  /* 右側の写真（サムネイル） */
-  .timeline-thumb {
-    width: 75px;
-    height: 60px;
-    object-fit: cover;
+  /* 右側の写真（HPリンク付き） */
+  .timeline-photo-link {
+    position: relative;
+    display: block;
+    width: 80px;
+    height: 64px;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    overflow: hidden;
     flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-decoration: none;
+  }
+  .timeline-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  .timeline-photo-link:hover .timeline-thumb {
+    transform: scale(1.08);
+  }
+  .hp-badge {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 1px 4px;
+    border-radius: 3px;
   }
 
   /* マップリンク */
@@ -414,7 +437,10 @@
           </div>
           <div class="timeline-desc">大阪到着！本場のお好み焼きランチを堪能。</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=300&q=80" alt="千房のお好み焼き" class="timeline-thumb">
+        <a href="https://shop.chibo.com/detail/38/" target="_blank" class="timeline-photo-link" title="千房 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=300&q=80" alt="千房" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -428,7 +454,10 @@
           </div>
           <div class="timeline-desc">マイカップヌードル作り体験（14:30〜）！</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=300&q=80" alt="カップヌードル" class="timeline-thumb">
+        <a href="https://www.cupnoodles-museum.jp/ja/osaka_ikeda/" target="_blank" class="timeline-photo-link" title="カップヌードルミュージアム 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?auto=format&fit=crop&w=300&q=80" alt="カップヌードル" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -442,7 +471,10 @@
           </div>
           <div class="timeline-desc">大阪のシンボル・天守閣に登って景色を鑑賞！</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=300&q=80" alt="大阪城天守閣" class="timeline-thumb">
+        <a href="https://www.osakacastle.net/" target="_blank" class="timeline-photo-link" title="大阪城天守閣 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1590559899731-a382839e5549?auto=format&fit=crop&w=300&q=80" alt="大阪城天守閣" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -456,6 +488,10 @@
           </div>
           <div class="timeline-desc">ホテルに到着！部屋で荷物を置いて少し一休みの時間。</div>
         </div>
+        <a href="https://www.hearton.co.jp/hotel/nishiumeda" target="_blank" class="timeline-photo-link" title="ハートンホテル西梅田 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=300&q=80" alt="ハートンホテル" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -469,7 +505,10 @@
           </div>
           <div class="timeline-desc">ガッツリお肉を食べるシュラスコ懇親会！（※ホテルから徒歩約6分）</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80" alt="バルバッコア" class="timeline-thumb">
+        <a href="https://barbacoa.jp/pages/umeda" target="_blank" class="timeline-photo-link" title="バルバッコア梅田店 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=300&q=80" alt="バルバッコア" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
     </div>
@@ -504,7 +543,10 @@
           </div>
           <div class="timeline-desc">今回のメイン！枚方市にて最先端3D・ICT施工をしっかり勉強。</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80" alt="DX研修" class="timeline-thumb">
+        <a href="https://www.kkr.mlit.go.jp/kingi/infradx-center/index.html" target="_blank" class="timeline-photo-link" title="近畿インフラDX推進センター 公式案内を見る">
+          <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=300&q=80" alt="DX研修" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -518,7 +560,10 @@
           </div>
           <div class="timeline-desc">京都のおいしいおばんざいランチを堪能。</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?auto=format&fit=crop&w=300&q=80" alt="京おばんざい" class="timeline-thumb">
+        <a href="https://mukadeya.gorp.jp/" target="_blank" class="timeline-photo-link" title="京おばんざい 百足屋 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?auto=format&fit=crop&w=300&q=80" alt="京おばんざい 百足屋" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -532,7 +577,10 @@
           </div>
           <div class="timeline-desc">朱色の千本鳥居を散策。お土産もここで！</div>
         </div>
-        <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=300&q=80" alt="伏見稲荷" class="timeline-thumb">
+        <a href="https://inari.jp/" target="_blank" class="timeline-photo-link" title="伏見稲荷大社 公式HPを見る">
+          <img src="https://images.unsplash.com/photo-1478436127897-769e1b3f0f36?auto=format&fit=crop&w=300&q=80" alt="伏見稲荷大社" class="timeline-thumb">
+          <span class="hp-badge">公式HP ↗</span>
+        </a>
       </div>
 
       <div class="timeline-item">
@@ -588,9 +636,9 @@
   <!-- NOTICE / 注意事項 -->
   <section class="section" style="padding:0; background:transparent; box-shadow:none;">
     <div class="info-card">
-      <h3>📌 みんなへのお願い（注意事項）</h3>
+      <h3>📌 皆様へのお願い</h3>
       <ul class="info-list">
-        <li><strong>集合時間は厳守！：</strong>バスの発車に遅れないよう5分前行動で頼みます！</li>
+        <li><strong>バスの発車に遅れないよう時間厳守でお願いします。</strong></li>
         <li><strong>バス内はシートベルト着用：</strong>移動中は安全第一で必ずシートベルトを着用してください。</li>
         <li><strong>貴重品の管理：</strong>お財布やスマホなど大事な物は各自で管理をお願いします。</li>
         <li><strong>スケジュールの変更あり：</strong>道路の混雑状況によって時間が多少前後する場合があります。</li>
